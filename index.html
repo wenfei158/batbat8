@@ -1,0 +1,581 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+		<link rel="stylesheet" type="text/css" href="./css/animation.css" />
+		<script type="text/javascript" src="./script/jquery-2.1.1.min.js"></script>	
+		<script type="text/javascript" src="./script/jquery.form.js"></script>
+		<script type="text/javascript" src="./script/jquery.cookie.js"></script>
+		<script type="text/javascript" src="./script/jquery-html5Validate-min.js"></script>
+		<script type="text/javascript" src="./script/tagCloud.js"></script>
+		<script type="text/javascript" src="./script/waterFall.js"></script>
+		<script type="text/javascript" src="./script/cardRotate.js"></script>
+		<script type="text/javascript" src="./script/overallLayout.js"></script>
+		<script type="text/javascript" src="./script/script.js"></script>
+		<title>
+			(^_^)_BAT_(^_^)
+		</title>
+	</head>
+	<body>
+		<header>
+            <ul class="menu">
+                <li id="logo" style="float:left;height:60px"><img  src="./image/logo.png" /><li>
+                <li id="h1" class="liLeft">活动寻友</li>
+                <li id="h2" class="liLeft">跳蚤市场</li>
+                <li id="h3"  class="liLeft">兴趣话题</li>
+                <li id="register" class="liRight visible">注册</li>
+                <li id="exit" class="liRight hidden">退出</li>
+                <li class="liRight">|</li>
+                <li id="login"  class="liRight visible">登陆</li>
+                <li id="person" class="liRight hidden">
+                	<div></div>
+                	<ul style="display:none;">
+                		<li style="display:block;"><span id="center">个人中心</span></li>
+                		<li style="display:block;"><span id="alter">修改密码</span></li>
+                	</ul>
+                </li>                
+	        <ul>
+		</header>
+		<div class="pagesToolbar">
+			<ul>
+	            <li id="l1" class="focus"></li>
+	            <li id="l2"></li>
+	            <li id="l3"></li>
+            </ul>
+		</div>
+		<section id="selector1" class="active" style="display:block;opacity:1;">
+			<article>
+				<div class="adjast_width">
+					<div class="adjast_height">
+						<div id="container1" class="container">
+							<div id="content1"></div>		
+						</div>
+					</div>
+					<div id="controler1" class="controler">
+						<div id="actionColor" class="colorAndInformation">
+							<legend>控制栏</legend>
+							<ul class="middle">
+								<li>
+									<span>颜色绑定：</span>						
+								</li>
+								<li id="actionOrange" data-order="">
+									<ul class="option hidden">
+										<li data-value="1">户外/旅游</li>
+										<li data-value="2">文化/演出</li>
+										<li data-value="3">派对/夜店</li>
+										<li data-value="4">相亲/交友</li>
+										<li data-value="5">体育/运动</li>
+										<li data-value="6">休闲/娱乐</li>
+										<li data-value="7">电影/美食</li>
+										<li data-value="8">爱心/公益</li>
+										<li data-value="9">教育/讲座</li>
+										<li data-value="10">摄影/购物</li>
+										<li data-value="11">其他</li>
+									</ul>
+									<span>待绑定</span>							
+								</li>
+								<li id="actionGreen" data-order="">
+									<ul class="option hidden">
+										<li data-value="1">户外/旅游</li>
+										<li data-value="2">文化/演出</li>
+										<li data-value="3">派对/夜店</li>
+										<li data-value="4">相亲/交友</li>
+										<li data-value="5">体育/运动</li>
+										<li data-value="6">休闲/娱乐</li>
+										<li data-value="7">电影/美食</li>
+										<li data-value="8">爱心/公益</li>
+										<li data-value="9">教育/讲座</li>
+										<li data-value="10">摄影/购物</li>
+										<li data-value="11">其他</li>
+									</ul>
+									<span>待绑定</span>						
+								</li>
+								<li id="actionBlue" data-order="">
+									<ul class="option hidden">
+										<li data-value="1">户外/旅游</li>
+										<li data-value="2">文化/演出</li>
+										<li data-value="3">派对/夜店</li>
+										<li data-value="4">相亲/交友</li>
+										<li data-value="5">体育/运动</li>
+										<li data-value="6">休闲/娱乐</li>
+										<li data-value="7">电影/美食</li>
+										<li data-value="8">爱心/公益</li>
+										<li data-value="9">教育/讲座</li>
+										<li data-value="10">摄影/购物</li>
+										<li data-value="11">其他</li>
+									</ul>
+									<span>待绑定</span>		
+								</li>				
+								<li id="actionButton" class="controlerBtn">
+									<span>换一组标签</span>	
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</article>
+			<aside id="aside1">
+				<form id="actionSubmit" style="margin-top:15px;">
+					<legend>活动发布</legend>
+					<ul>
+						<li>
+							<label for="actionkind">活动种类:</label>
+			            	<select name="actionkind" id="actionkind" required="required" autofocus="autofocus">
+								<option value="1">户外/旅游</option>
+								<option value="2">文化/演出</option>
+								<option value="3">派对/夜店</option>
+								<option value="4">相亲/交友</option>
+								<option value="5">体育/运动</option>
+								<option value="6">休闲/娱乐</option>
+								<option value="7">电影/美食</option>
+								<option value="8">爱心/公益</option>
+								<option value="9">教育/讲座</option>
+								<option value="10">摄影/购物</option>
+								<option value="11">其他</option>
+							</select>
+						</li>
+						<li>
+							<label for="actionname">活动名称:</label>
+							<input type="text" name="actionname" id="actionname" required="required" maxlength="100" />
+						</li>
+						<li>
+							<label for="actiontime">时间:</label>
+							<input type="text" name="actiontime" id="actiontime" placeholder="如20140909" required="required" maxlength="20" />
+						</li>
+						<li>
+							<label for="actionsite">地点:</label>
+							<input type="text" name="actionsite" id="actionsite" required="required" maxlength="100" />
+						</li>
+						<li>
+							<label for="actionpnum">人数:</label>
+							<input type="text" name="actionpnum" id="actionpnum" placeholder="如需区分性别请写明" required="required" maxlength="100" />
+						</li>
+						<li>
+							<label for="actionconnectway">联系方式:</label>
+			            	<select name="actionconnectway" id="actionconnectway" required="required">
+								<option value="qq">QQ</option>
+								<option value="weiXin">微信</option>
+								<option value="msn">MSN</option>
+								<option value="momo">陌陌</option>
+								<option value="email">电子邮件</option>
+								<option value="home">本网站</option>
+								<option value="reality">现实面谈</option>
+								<option value="others">其他</option>
+							</select>
+						</li>
+						<li>
+							<label for="actionconnectdetails">联系详情:</label>
+		                    <textarea type="text" name="actionconnectdetails" id="actionconnectdetails" required="required"></textarea>					
+						</li>
+					</ul>
+					<input type="submit" value="发布" />
+				    <input type="hidden" name="type" value="actionSubmit" autocomplete="off" />
+				</form>
+
+				<form id="actionQueryForm" style="margin-top:35px;" onsubmit="return false;">
+					<legend>活动查询与定制</legend>
+					<ul>
+						<li>
+							<label for="actionQueryKind">活动种类:</label>
+			            	<select name="actionQueryKind" id="actionQueryKind" required="required">
+								<option value="1">户外/旅游</option>
+								<option value="2">文化/演出</option>
+								<option value="3">派对/夜店</option>
+								<option value="4">相亲/交友</option>
+								<option value="5">体育/运动</option>
+								<option value="6">休闲/娱乐</option>
+								<option value="7">电影/美食</option>
+								<option value="8">爱心/公益</option>
+								<option value="9">教育/讲座</option>
+								<option value="10">摄影/购物</option>
+								<option value="11">其他</option>
+							</select>
+						</li>
+						<li>
+							<label for="actionQueryName">活动名称:</label>
+							<input type="text" name="actionQueryName" id="actionQueryName" required="required" maxlength="100" />
+						</li>				
+					</ul>
+					<div class="form2button">
+						<input type="button" id="actionCustom" value="定制" />
+						<input type="button" id="actionQuery" value="查询" />
+					</div>
+				</form>
+			</aside>
+			<div class="down_scroll scroll1" style="display:block;"></div>
+			<div class="action_details" data-for=""></div>
+		</section>
+		<section id="selector2" style="display:none;">
+			<article>
+				<div class="adjast_width">
+					<div class="adjast_height">
+						<div id="container2" class="container">
+							<div id="content2"></div>
+						</div>
+					<div>
+					<div id="controler2" class="controler">
+						<div id="goodsColor" class="colorAndInformation">
+							<legend>控制栏</legend>
+							<ul class="middle">
+								<li>
+									<span>颜色绑定：</span>						
+								</li>
+								<li id="goodsRed">
+									<ul class="option hidden" data-order="">
+										<li data-value="1">数码</li>
+										<li data-value="2">生活用品</li>
+										<li data-value="3">图书</li>
+										<li data-value="4">票券卡</li>
+										<li data-value="5">食品</li>
+										<li data-value="6">鞋服配饰</li>
+										<li data-value="7">美妆</li>
+										<li data-value="8">家居家电</li>
+										<li data-value="9">母婴用品</li>
+										<li data-value="10">珠宝收藏</li>
+										<li data-value="11">其他</li>
+									</ul>
+									<span>待绑定</span>							
+								</li>
+								<li id="goodsGreen">
+									<ul class="option hidden" data-order="">
+										<li data-value="1">数码</li>
+										<li data-value="2">生活用品</li>
+										<li data-value="3">图书</li>
+										<li data-value="4">票券卡</li>
+										<li data-value="5">食品</li>
+										<li data-value="6">鞋服配饰</li>
+										<li data-value="7">美妆</li>
+										<li data-value="8">家居家电</li>
+										<li data-value="9">母婴用品</li>
+										<li data-value="10">珠宝收藏</li>
+										<li data-value="11">其他</li>
+									</ul>
+									<span>待绑定</span>						
+								</li>
+								<li id="goodsBlue">
+									<ul class="option hidden" data-order="">
+										<li data-value="1">数码</li>
+										<li data-value="2">生活用品</li>
+										<li data-value="3">图书</li>
+										<li data-value="4">票券卡</li>
+										<li data-value="5">食品</li>
+										<li data-value="6">鞋服配饰</li>
+										<li data-value="7">美妆</li>
+										<li data-value="8">家居家电</li>
+										<li data-value="9">母婴用品</li>
+										<li data-value="10">珠宝收藏</li>
+										<li data-value="11">其他</li>
+									</ul>
+									<span>待绑定</span>		
+								</li>				
+								<li id="goodsButton" class="controlerBtn">
+									<span>换一组物品</span>	
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</article>
+			<aside id="aside2">
+				<form id="goodsSubmit" enctype="multipart/form-data" style="margin-top:15px;">
+					<legend>物品发布</legend>
+					<ul>
+						<li>
+							<label for="goodskind">物品种类:</label>
+			            	<select name="goodskind" id="goodskind" required="required" autofocus="autofocus">
+								<option value="1">数码</option>
+								<option value="2">生活用品</option>
+								<option value="3">图书</option>
+								<option value="4">票券卡</option>
+								<option value="5">食品</option>
+								<option value="6">鞋服配饰</option>
+								<option value="7">美妆</option>
+								<option value="8">家居家电</option>
+								<option value="9">母婴用品</option>
+								<option value="10">珠宝收藏</option>
+								<option value="11">其他</option>
+							</select>
+						</li>
+						<li>
+							<label for="goodsname">物品名称:</label>
+							<input type="text" name="goodsname" id="goodsname" required="required" maxlength="100" />
+						</li>
+						<li>
+							<label for="goodsprice">价格:</label>
+							<input type="text" name="goodsprice" id="goodsprice" placeholder="如20元" required="required" maxlength="20" />
+						</li>
+						<li>
+							<label for="goodsimage">上传图片:</label>
+							<input type="file" name="goodsimage" id="goodsimage" accept="image/jpeg" required="required"/>
+						</li>
+						<li style="margin-top:-1px;">
+							<p class="note">*为了正常显示：请上传jpg格式的图片且文件不要大于200kb，谢谢！</p>
+						</li>
+						<li>
+							<label for="goodsdegree">新旧程度:</label>
+							<input type="text" name="goodsdegree" id="goodsdegree" placeholder="如全新、五成新等" required="required" maxlength="100" />
+						</li>
+						<li>
+							<label for="goodsconnectway">联系方式:</label>
+			            	<select name="goodsconnectway" id="goodsconnectway" required="required">
+								<option value="qq">QQ</option>
+								<option value="weiXin">微信</option>
+								<option value="msn">MSN</option>
+								<option value="momo">陌陌</option>
+								<option value="email">电子邮件</option>
+								<option value="home">本网站</option>
+								<option value="reality">现实面谈</option>
+								<option value="others">其他</option>
+							</select>
+						</li>
+						<li>
+							<label for="goodsconnectdetails">联系详情:</label>
+		                    <textarea type="text" name="goodsconnectdetails" id="goodsconnectdetails" required="required" style="height:3em;"></textarea>					
+						</li>
+					</ul>
+					<input type="submit" value="发布" />
+				    <input type="hidden" name="type" value="goodsSubmit" autocomplete="off" />
+				</form>
+
+				<form id="goodsQueryForm" style="margin-top:35px;" onsubmit="return false;">
+					<legend>物品查询与定制</legend>
+					<ul>
+						<li>
+							<label for="goodsQueryKind">物品种类:</label>
+			            	<select name="goodsQueryKind" id="goodsQueryKind" required="required">
+								<option value="1">数码</option>
+								<option value="2">生活用品</option>
+								<option value="3">图书</option>
+								<option value="4">票券卡</option>
+								<option value="5">食品</option>
+								<option value="6">鞋服配饰</option>
+								<option value="7">美妆</option>
+								<option value="8">家居家电</option>
+								<option value="9">母婴用品</option>
+								<option value="10">珠宝收藏</option>
+								<option value="11">其他</option>
+							</select>
+						</li>
+						<li>
+							<label for="goodsQueryName">物品名称:</label>
+							<input type="text" name="goodsQueryName" id="goodsQueryName" required="required" maxlength="100" />
+						</li>
+					</ul>
+					<div class="form2button">
+						<input type="button" id="goodsCustom" value="定制" />
+						<input type="button" id="goodsQuery" value="查询" />
+					</div>
+				</form>
+			</aside>			
+			<div class="up_scroll scroll2" style="display:none;"></div>
+			<div class="down_scroll scroll2" style="display:none;"></div>
+		</section>
+		<section id="selector3" style="display:none;"> 
+			<article>
+				<div class="adjast_width">
+					<div class="adjast_height">
+						<div id="container3" class="container">
+							<div id="content3">
+								<div id="itemlist">
+									<div id="topic0" class="item-0" data-for="" data-order="0">
+									</div>
+									<div id="topic1" class="item-1" data-for="" data-order="1">
+									</div>
+									<div id="topic2" class="item-2" data-for="" data-order="2">
+									</div>
+									<div id="topic3" class="item-3" data-for="" data-order="3">
+									</div>
+									<div id="topic4" class="item-4" data-for="" data-order="4">
+									</div>
+								</div>
+								<div id="itemdescription">
+									<span data-for="" style="display: inline;"></span>
+									<span data-for="" style="display: none;"></span>
+									<span data-for="" style="display: none;"></span>
+									<span data-for="" style="display: none;"></span>
+									<span data-for="" style="display: none;"></span>
+								</div>
+							</div>
+						</div>
+					<div>
+					<div id="controler3" class="controler">
+						<div id="topicInformation" class="colorAndInformation">
+							<legend>信息发送</legend>
+							<ul class="middle">
+								<li>
+									<span>发送信息：</span>						
+								</li>
+								<li id="informationPost" style="height:18px">
+									<textarea type="text" id="information" name="information" style="height:20px;border:0;"></textarea>
+								</li>
+								<li id="postButton" class="controlerBtn" style="left:512px;">
+									<span>发送</span>	
+								</li>
+								<li id="deleteButton" class="controlerBtn">
+									<span>删除话题</span>	
+								</li>
+							</ul>
+						</div>
+					</div>					
+				</div>
+			</article>
+			<aside id="aside3">
+				<form id="topicSubmit" style="margin-top:15px;">
+					<legend>话题发布</legend>
+					<ul>
+						<li>
+							<label for="topiclimitTime">时限:</label>
+			            	<select name="topiclimitTime" id="topiclimitTime" required="required" autofocus="autofocus">
+								<option value="86400">1天</option>
+								<option value="604800">1周</option>
+								<option value="2592000">1月</option>
+								<option value="0">永久</option>
+							</select>
+						</li>
+						<li>
+							<label for="topicName">话题名称:</label>
+							<input type="text" name="topicName" id="topicName" required="required" maxlength="100" />
+						</li>
+					</ul>
+					<input type="submit" value="发布" />
+				    <input type="hidden" name="type" value="topicSubmit" autocomplete="off" />
+				</form>
+
+				<form id="topicQueryForm" style="margin-top:35px;" onsubmit="return false;">
+					<legend>话题查询与定制</legend>
+					<ul>
+						<li>
+							<label for="topicQueryName">话题名称:</label>
+							<input type="text" name="topicQueryName" id="topicQueryName" required="required" maxlength="100" />
+						</li>
+					</ul>
+					<div class="form2button">
+						<input type="button" id="topicCustom" value="定制" />
+						<input type="button" id="topicQuery" value="查询" />
+					</div>
+				</form>
+
+				<div id="resultShow" style="margin-top:35px;height:280px">
+					<legend>查询与定制结果</legend>
+					<div id="result" style="overflow-y:scroll;width:98%;margin:0 auto;height:210px">
+					</div>
+					<div>
+						<p class="note" style="padding-left:10px">*查询与定制结果都以“话题名_用户名”的形式显示，您可以单击进行添加</p>
+					</div>
+				</div>
+			</aside>
+			<div class="up_scroll scroll3" style="display:none;"></div>
+		</section>	
+		<footer>
+			<span class="firstRow">
+				请使用Chome、Firefox、IE9以上的现代浏览器
+			</span>
+			<br>
+			<span class="secondRow">
+				Copyright2014 Gaoyang. All Rights Reserved. 高阳 版权所有. 联系方式：wenfei55@163.com
+	        </span>			
+		</footer>
+		<div id="registerView" class="wrapper">
+		    <form id="registerForm">
+			    <div class="box">
+		       		<img id="registerClose" class="close" src="./image/close.png" />
+			        <div class="boxCenter">
+			            <p><label for="registername">用户名：</label></p>
+			            <p><input  id="registername" name="registername" class="input" autofocus="autofocus" required="required" pattern="^\w+$" data-min="5" data-max="20"autocomplete="off" placeholder="请输入用户名" /></p>
+			            <p><label for="password1">登陆密码：</label></p>
+			            <p><input type="password" id="password1" name="password1" class="input" data-min="6" data-max="20" required="required" placeholder="请输入登陆密码" autocomplete="off"/></p>
+			            <p><label for="password2">确认密码：</label></p>
+			            <p><input type="password" id="password2" class="input" data-min="6" data-max="20" required="required" disabled="disabled" placeholder="请再次输入登陆密码" autocomplete="off"/></p>
+			            <p><label for="registercode">验证码：</label></p>
+			            <p><input type="text" id="registercode" name="registercode" class="input"  required="required" pattern="^\d{5}$" placeholder="请输入验证码" autocomplete="off" style="width:180px;"/><a class="codeChange" href="javascript:"><img src="code.php?action=verifycode" style="padding-top:10px" height="20" border="0">点击换一张</a></p>
+			        </div>
+			        <div class="boxButtons">
+			            <input type="submit" class="btn" value="注册"/>
+			    	</div>
+				    <input type="hidden" name="type" value="registerPost" autocomplete="off" />
+			    </div>
+		    </form>
+		</div>
+		<div id="loginView" class="wrapper">
+		    <form id="loginForm">
+			    <div class="box">
+			        <img id="loginClose" class="close" src="./image/close.png" />
+			        <div class="boxCenter">
+			            <p><label for="loginname">用户名：</label></p>
+			            <p><input id="loginname" name="loginname" class="input" autofocus="autofocus" required="required" pattern="^\w+$" data-min="5" data-max="20" placeholder="请输入用户名" /></p>
+			            <p><label for="password">登陆密码：</label></p>
+			            <p><input type="password" id="password" name="password" class="input" data-min="6" data-max="20" required="required" placeholder="请输入登陆密码"/></p>
+			        </div>
+			        <div class="boxButtons">
+			            <input id="remember" type="checkbox" />
+			            <label for="remember">记住登录状态</label>
+			            <input type="submit" class="btn" value="登陆"/>
+			        </div>
+				    <input type="hidden" name="type" value="loginPost" autocomplete="off" />
+			    </div>
+		    </form>
+		</div>
+		<div id="centerView" class="wrapper" style="padding:45px 0;">
+			<div class="box" style="width:800px">
+				<h2>个人中心</h2>
+				<img id="centerClose" class="close" src="./image/close.png" />
+				<div class="leftbox">
+					<div id="actionSubs" class="itembox actionItem">
+						<h3>已发布的活动：</h3>
+						<div></div>
+					</div>
+					<div id="goodsSubs" class="itembox goodsItem">
+						<h3>已发布的物品：</h3>
+						<div></div>
+					</div>
+					<div id="topicSubs" class="itembox topicItem">
+						<h3>已发布的话题：</h3>
+						<div></div>
+					</div>
+					<div id="actionCuss" class="itembox actionItem">
+						<h3>已定制的活动：</h3>
+						<div></div>
+					</div>
+					<div id="goodsCuss" class="itembox goodsItem">
+						<h3>已定制的物品：</h3>
+						<div></div>
+					</div>                        
+					<div id="topicCuss" class="itembox topicItem">
+						<h3>已定制的话题：</h3>
+						<div></div>
+					</div>
+				</div>
+				<div class="rightbox">
+					<div id="deletebox">
+						<h3 style="float:none;">删除框</h3>
+					</div>
+				</div>
+				<p class="note">
+					<span>注：如要您想要删除已发布或定制的内容，将其拉入删除框即可完成</span>
+				</p>
+			</div>
+		</div>			
+		<div id="alterView" class="wrapper">
+		    <form id="alterForm">
+			    <div class="box">
+		       		<img id="alterClose" class="close" src="./image/close.png" />
+			        <div class="boxCenter">
+			            <p><label for="oldPwd">原始密码：</label></p>
+			            <p><input type="password" id="oldPwd" name="oldPwd" class="input" data-min="6" data-max="20" required="required" placeholder="请输入原始密码" autocomplete="off"/></p>
+			            <p><label for="newPwd1">新密码：</label></p>
+			            <p><input type="password" id="newPwd1" name="newPwd1" class="input" data-min="6" data-max="20" required="required" placeholder="请输入新密码" autocomplete="off"/></p>
+			            <p><label for="password2">确认新密码：</label></p>
+			            <p><input type="password" id="newPwd2" class="input" data-min="6" data-max="20" required="required" placeholder="请再次输入新密码" autocomplete="off"/></p>
+			            <p><label for="altercode">验证码：</label></p>
+			            <p><input type="text" id="altercode" name="altercode" class="input"  required="required" pattern="^\d{5}$" placeholder="请输入验证码" autocomplete="off" style="width:180px;"/><a class="codeChange" href="javascript:"><img src="code.php?action=verifycode" style="padding-top:10px" height="20" border="0">点击换一张</a></p>
+			        </div>
+			        <div class="boxButtons">
+			            <input type="submit" class="btn" value="确定"/>
+			    	</div>
+				    <input type="hidden" name="type" value="alterPost" autocomplete="off" />
+			    </div>
+		    </form>
+		</div>
+	</body>
+</html>
